@@ -1,0 +1,132 @@
+<HTML>
+    <HEAD>
+    <TITLE>Augusto de Campos - Site Oficial</TITLE>
+
+<script type="text/javascript">
+
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+
+</script>
+
+    </HEAD>
+    
+    <body bgcolor="#fba744" background="images/background.jpg" text="#000080" link="#000080" vlink="#000080" leftmargin=2 marginwidth="2">
+    
+    <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td><A href="home.html"><IMG height=65 alt="" src="images/poem_tit.gif" width=526 border=0></A></td>
+    </tr>
+    </table>
+    
+    
+    <table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    
+    <td width="186" valign="top"><IMG height=290 alt="" src="images/poem_men.gif" width=191 useMap=#menu border=0></td>
+    <td width="26">&nbsp;</td>
+    <td width="388" valign="top">
+    <table width="311" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td colspan=2 height="25"><center><font face="Verdana" size="2" color="#4249A5"><b>Clip poemas do livro "Não" (2003)</b></font></center>
+    </td>
+    </tr>
+    
+    <tr>
+    <td width="150" align="middle" valign="top">
+    <A href="/pagina-obras/cidadecitycite.html"><IMG height=100 alt="" src="images/clip_cidadecitycite.gif" width=100 vspace=1 border=0></A><br>
+    <font face="Arial, Helvetica, sans-serif" size="1"><b>cidadecitycité</b>
+    (1999) <br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">Flash</a>)</font></td>
+    <td width="150" align="middle" valign="top">
+    <A href="/pagina-obras/rever.html"><IMG height=100 alt="" src="images/clip_rever.gif" width=100 vspace=1 border=0></A><br>
+    <font face="Arial, Helvetica, sans-serif" size="1"><b>rever (1999)</b><br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">Flash</a>)</font></td>
+    </tr>
+    <tr>
+    <td width="150" align="middle" valign="top">
+    <A href="/pagina-obras/ininstante.html"><IMG height=100 alt="" src="images/clip_ininstante.gif" width=100 vspace=2 border=0></A><br>
+    <b><font face="Arial, Helvetica, sans-serif" size="1">
+    ininstante (1999)<br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">Flash</a>)</font></b></td>
+    <td width="150" align="middle" valign="top">
+    <A href="/pagina-obras/sos.html"><IMG height=100 alt="" src="images/clip_sos.gif" width=100 vspace=2 border=0></A><br>
+    <b><font face="Arial, Helvetica, sans-serif" size="1">
+    sos (2000)<br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">Flash</a>)</font></b><BR></td>
+    </tr>
+    
+    <tr>
+    <td width="150" align="middle" valign="top">
+    <A href="/pagina-obras/criptocardiograma.html"><IMG height=100 alt="" src="images/criptocardiograma.gif" width=100 vspace=2 border=0></A><br>
+    <b><font face="Arial, Helvetica, sans-serif" size="1">
+    criptocardiograma<br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">Flash</a>)</font></b><BR></td>
+    <td width="150" align="middle" valign="top"><A href="/obras/semsaida.html"><IMG height=100 alt="" src="images/semsaida.gif" width=100 vspace=2 border=0></A><br>
+    <b><font face="Arial, Helvetica, sans-serif" size="1">
+    sem saida<br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">Flash</a>)</font></b><BR></td>
+    </tr>
+    
+    
+    <tr>
+    <td width="150" align="middle" valign="top">
+    <A href="javascript:poema('doors-pt.htm','poema007','width=680,height=490')"><IMG height=100 alt="" src="images/doors_port.gif" width=100 vspace=2 border=0></A><br>
+    <b><font face="Arial, Helvetica, sans-serif" size="1">
+    portas
+    do ouver<br>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">ShockWave</a>)</font></b><BR></td>
+    <td width="150" align="middle" valign="top"><A href="javascript:poema('doors-eng.htm','poema006','width=680,height=490')"><IMG height=100 alt="" src="images/doors_ingles.gif" width=100 vspace=2 border=0></A><br>
+    <b><font face="Arial, Helvetica, sans-serif" size="1">
+    doors
+                of eyear<BR>
+    (utiliza plug-in <a href="http://www2.uol.com.br/internet/beaba/shockwave.htm" target="_blank">ShockWave</a>)</font></b><BR></td>
+    </tr>
+    
+    </table>
+    </td>
+    </tr>
+    </table>
+    &nbsp;
+    <map name="menu"><AREA SHAPE=RECT COORDS="20,20,147,36" HREF="biografia.html">
+    <AREA SHAPE=RECT COORDS="22,47,97,61" HREF="obras.html">
+    <AREA SHAPE=RECT COORDS="23,72,111,87" HREF="poemas.html">
+    <AREA SHAPE=RECT COORDS="20,122,106,137" HREF="textos.html">
+    <AREA SHAPE=RECT COORDS="22,149,85,164" HREF="links.html">
+    <AREA SHAPE=RECT COORDS="18,96,91,112" HREF="audio.html">
+    <area coords ="21,172,177,189" href="clippoemas.html" shape=RECT shape-rect>
+    </map>
+    
+    </body>
+    </html>
